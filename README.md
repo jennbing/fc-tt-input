@@ -9,20 +9,3 @@ tensors in low-parametric representation of high-dimensional tensors.
 processor: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz 3.70GHz
 Installed memory (RAM): 4.00GB
 System type: 64-bit Operating System, x64-based processor
-
-
-cd TT-Toolbox-master
-setup
-cd ..
-cd matconvnet-1.0-beta24/matlab
-vl_setupnn
-cd ..
-cd ..
-cd TensorNet-master/src/matlab
-addpath(pwd)
-cd ..
-cd ..
-cd ..
-cd autonn-master
-setup_autonn
-cd ..
