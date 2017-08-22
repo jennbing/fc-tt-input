@@ -1,5 +1,5 @@
 function [net, info] = cnn_mnist_tt_tt_input(varargin)
-% CNN_MNIST_TT  Demonstrated TensorNet on MNIST data stored / computed in
+% CNN_MNIST_TT_TT_INPUT  Demonstrated TensorNet on MNIST data stored / computed in
 % TT format.
 
 % Fix the random seed.
