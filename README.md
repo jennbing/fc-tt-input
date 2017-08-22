@@ -20,8 +20,8 @@ This is a Matlab implementation of the training of fully connected neural networ
 - System type -> 64-bit Operating System, x64-based processor
 
 # Reproducing Experiments
-- Insert files inside num_diff folder into TensorNet/experiments/mnist/
-[net_tt, info_tt] = cnn_mnist_tt_tt_input('expDir', 'data/mnist-tt');__ 
+- Insert files inside num_diff folder into TensorNet/experiments/mnist/  
+[net_tt, info_tt] = cnn_mnist_tt_tt_input('expDir', 'data/mnist-tt');  
 [net_tt, info_tt] = cnn_mnist_tt_full_input('expDir', 'data/mnist-baseline');
 
 - Insert files inside auto_diff folder into autonn/examples
