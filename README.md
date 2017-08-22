@@ -20,7 +20,7 @@ This is a Matlab implementation of the training of a fully connected neural netw
 - System type -> 64-bit Operating System, x64-based processor
 
 # Reproducing Experiments
-> Install the softwares mentioned above, open autonn/matlab/@Layer to overload user-defined function for automatic differentiation, add in
+> Install the softwares mentioned above, open autonn/matlab/@Layer to overload user-defined function for automatic differentiation, add in the source code
 ``` 
 function y = vl_nntt_forward(obj, varargin)
    y = Layer(@vl_nntt_forward, obj, varargin{:}) ; 
