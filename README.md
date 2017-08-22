@@ -11,7 +11,7 @@ This is a Matlab implementation of the training of a fully connected neural netw
 (https://github.com/vlfeat/autonn)
 - TT-toolbox Version 2.2.2 is a MATLAB implementation of basic operations with tensors in low-parametric representation of high-dimensional tensors.
 (https://github.com/oseledets/TT-Toolbox)
-- TensorNet implementation of the Tensor Train layer (TT-layer) of a neural network.
+- TensorNet is a Matlab implementation of the Tensor Train layer (TT-layer) of a neural network.
 (https://github.com/Bihaqo/TensorNet)
 
 ## Hardwares:
@@ -20,7 +20,7 @@ This is a Matlab implementation of the training of a fully connected neural netw
 - System type -> 64-bit Operating System, x64-based processor
 
 # Reproducing Experiments
-Install the softwares mentioned above, then
+Install the softwares mentioned above,
 > Insert files inside num_diff folder into TensorNet/experiments/mnist/  
 1. Train fully connected network using MNIST data stored / computed in TT format
 ```
