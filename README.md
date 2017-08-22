@@ -1,9 +1,8 @@
 This is a Matlab implementation of the training of fully connected neural network using compressed data stored / computed in tensor-train (TT) format.
 
+# Implementation Details
 
-Implementation Details
-
-Softwares ~
+## Softwares:
 - Matlab R2016b, a scientific programming software
 (https://www.mathworks.com/products/matlab.html)
 - MatConvNet Version 1.0 beta24, MATLAB toolbox implementing Convolutional Neural Networks (CNNs) for computer vision applications
@@ -15,9 +14,12 @@ Softwares ~
 - TensorNet implementation of the Tensor Train layer (TT-layer) of a neural network.
 (https://github.com/Bihaqo/TensorNet)
 
-Hardwares ~
-processor: Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz 3.70GHz
-Installed memory (RAM): 4.00GB
-System type: 64-bit Operating System, x64-based processor
+## Hardwares:
+- Processor -> Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz 3.70GHz
+- Installed memory (RAM) -> 4.00GB
+- System type -> 64-bit Operating System, x64-based processor
 
+# Reproducing Experiments
+- Insert files inside num_diff folder into TensorNet/experiments/mnist/
 
+- Insert files inside auto_diff folder into au
