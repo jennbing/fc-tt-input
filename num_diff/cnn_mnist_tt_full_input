@@ -30,7 +30,7 @@ else
   save(opts.imdbPath, '-struct', 'imdb') ;
 end
 
-  net = cnn_mnist_init() ;
+  net = cnn_mnist_init1() ;
   
 % --------------------------------------------------------------------
 %                                                                Train
