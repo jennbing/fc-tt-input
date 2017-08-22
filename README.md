@@ -20,6 +20,7 @@ This is a Matlab implementation of the training of a fully connected neural netw
 - System type -> 64-bit Operating System, x64-based processor
 
 # Reproducing Experiments
+Install the softwares mentioned above, then
 > Insert files inside num_diff folder into TensorNet/experiments/mnist/  
 1. Train fully connected network using MNIST data stored / computed in TT format
 ```
