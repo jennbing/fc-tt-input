@@ -20,7 +20,16 @@ This is a Matlab implementation of the training of a fully connected neural netw
 - System type -> 64-bit Operating System, x64-based processor
 
 # Reproducing Experiments
-Install the softwares mentioned above,
+> Install the softwares mentioned above, open autonn/matlab/@Layer to overload user-defined function for automatic differentiation, add in
+``` 
+function y = vl_nntt_forward(obj, varargin)
+   y = Layer(@vl_nntt_forward, obj, varargin{:}) ; 
+end
+function y = full(obj, varargin)
+   y = Layer(@full, obj, varargin{:}) ;
+end
+```  
+
 > Insert files inside num_diff folder into TensorNet/experiments/mnist/  
 1. Train fully connected network using MNIST data stored / computed in TT format
 ```
@@ -30,7 +39,7 @@ Install the softwares mentioned above,
 ```
 [net_tt, info_tt] = cnn_mnist_tt_full_input('expDir', 'data/mnist-baseline');
 ```
-
+  
 > Insert files inside auto_diff folder into autonn/examples
 1. Train fully connected network using CIFAR-10 data stored / computed in TT format
 ```
