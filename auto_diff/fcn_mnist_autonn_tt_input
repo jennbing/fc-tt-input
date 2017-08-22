@@ -1,5 +1,5 @@
 function [net, info] = fcn_mnist_autonn_tt_input(varargin)
-% CNN_MNIST_AUTONN  Demonstrates MatConNet on MNIST data stored / computed
+% CNN_MNIST_AUTONN_TT_INPUT  Train on MNIST data stored / computed
 % in TT format.
 
 % Fix the random seed.
