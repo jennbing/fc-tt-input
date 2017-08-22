@@ -21,5 +21,7 @@ This is a Matlab implementation of the training of fully connected neural networ
 
 # Reproducing Experiments
 - Insert files inside num_diff folder into TensorNet/experiments/mnist/
+[net_tt, info_tt] = cnn_mnist_tt_tt_input('expDir', 'data/mnist-tt');__ 
+[net_tt, info_tt] = cnn_mnist_tt_full_input('expDir', 'data/mnist-baseline');
 
-- Insert files inside auto_diff folder into au
+- Insert files inside auto_diff folder into autonn/examples
