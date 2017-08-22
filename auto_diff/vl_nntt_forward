@@ -1,0 +1,40 @@
+function y = vl_nntt_forward(x,varargin)
+% VL_NNTT_FORWARD  Tensor Train layer forward pass
+%    out = VL_NNTT_FORWARD(layer, in, out) applies a linear operator layer.W
+%    which is represented in the TT-format to the data in.x:
+%       out.x = layer.W * in.x + biases,
+%    where biases are stored in layer.weights{2}.
+%
+%    The parameters of the model are the values of TT cores (layer.weights{1})
+%    and the biases (layer.weights{2}).
+%
+%    in.x is of size inHeight x inWidth x inChannels x batchSize.
+%
+%    The complexity of the forward pass is
+%       O(ttRank^2 * modeSize * numTTCores * inHeight * inWidth * inChannels * batchSize),
+%    where
+%       inHeight * inWidth * inChannels == modeSize^numTTCores.
+
+opts = struct('W', [], 'weights', [], 'learningRate', 1, 'weightDecay', 1, ...
+    'outHeight', [], 'outWidth', [], 'outChannels', []) ;
+[opts, posArgs] = vl_argparsepos(opts, varargin);
+
+opts.W.core = opts.weights{1};
+
+if strcmp(class(x),'tt_matrix')
+    y = full(opts.W*x);
+else
+    batchSize = size(x);
+    batchSize = batchSize(end);
+    y = opts.W * reshape(x, [], batchSize);
+end
+% y = full(opts.W * reshape(x, [], batchSize));
+% y = single(full(opts.W*x));
+
+
+if numel(opts.weights{2}) > 0
+    y = bsxfun(@plus, y, opts.weights{2}(:));
+end
+
+y = reshape(y, opts.outHeight, opts.outWidth, opts.outChannels, []);
+end
