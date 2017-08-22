@@ -1,4 +1,4 @@
-This is a Matlab implementation of the training of fully connected neural network using compressed data stored / computed in tensor-train (TT) format.
+This is a Matlab implementation of the training of a fully connected neural network using compressed data stored / computed in tensor-train (TT) format.
 
 # Implementation Details
 
@@ -21,21 +21,29 @@ This is a Matlab implementation of the training of fully connected neural networ
 
 # Reproducing Experiments
 - Insert files inside num_diff folder into TensorNet/experiments/mnist/  
-Train fully connected network using MNIST data stored / computed in TT format
+1. Train fully connected network using MNIST data stored / computed in TT format
 ```
 [net_tt, info_tt] = cnn_mnist_tt_tt_input('expDir', 'data/mnist-tt');  
 ```
-... in full array
+2. . . . MNIST data in full array
 ```
 [net_tt, info_tt] = cnn_mnist_tt_full_input('expDir', 'data/mnist-baseline');
 ```
 
 - Insert files inside auto_diff folder into autonn/examples
-... CIFAR-10 data stored / computed in TT format
+1. Train fully connected network using CIFAR-10 data stored / computed in TT format
+```
+[net_tt, info_tt] = fcn_cifar10_autonn_tt_input('expDir', 'data/cifar10-tt');
+```
+2. . . . CIFAR-10 data in full array
+```
+[net_tt, info_tt] = fcn_cifar10_autonn_full_input('expDir', 'data/cifar10-baseline');
+```
+3. . . .  MNIST data stored / computed in TT format
 ```
 [net_tt, info_tt] = fcn_mnist_autonn_tt_input('expDir', 'data/mnist-tt');
 ```
-... in full array
+4. . . . MNIST data in full array
 ```
 [net_tt, info_tt] = fcn_mnist_autonn_full_input('expDir', 'data/mnist-baseline');
 ```
