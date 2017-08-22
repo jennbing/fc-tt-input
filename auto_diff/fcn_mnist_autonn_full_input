@@ -1,5 +1,5 @@
 function [net, info] = fcn_mnist_autonn_full_input(varargin)
-% CNN_MNIST_AUTONN  Demonstrates MatConNet on MNIST data in full array.
+% CNN_MNIST_AUTONN_FULL_INPUT Train fully connected network on MNIST data in full array.
 
 % Fix the random seed.
 rng(0);
